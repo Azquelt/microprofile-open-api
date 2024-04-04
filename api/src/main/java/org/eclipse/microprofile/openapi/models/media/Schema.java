@@ -983,7 +983,7 @@ public interface Schema extends Extensible<Schema>, Constructible, Reference<Sch
     }
 
     /**
-     * Returns the first value from the examples property from this Schema instance.
+     * Returns the example property from this Schema instance.
      *
      * @return an object which is an example of an instance of this Schema
      * @deprecated use {@link #getExamples()}
@@ -992,7 +992,8 @@ public interface Schema extends Extensible<Schema>, Constructible, Reference<Sch
     Object getExample();
 
     /**
-     * Sets the examples property of this Schema instance to a single example.
+     * Sets the example property of this Schema instance. To represent examples that cannot be naturally represented in
+     * JSON or YAML, a string value can be used to contain the example with escaping where necessary.
      *
      * @param example
      *            an object which is an instance of this Schema
@@ -1002,7 +1003,8 @@ public interface Schema extends Extensible<Schema>, Constructible, Reference<Sch
     void setExample(Object example);
 
     /**
-     * Sets the examples property of this Schema instance to a single example.
+     * Sets the example property of this Schema instance. To represent examples that cannot be naturally represented in
+     * JSON or YAML, a string value can be used to contain the example with escaping where necessary.
      *
      * @param example
      *            an object which is an instance of this Schema
