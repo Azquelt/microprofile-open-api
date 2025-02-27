@@ -11,4 +11,6 @@ updates:
       interval: "weekly"
     ignore:
       - dependency-name: "jakarta.*"
-        update-types: [major, minor]
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
