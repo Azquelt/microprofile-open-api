@@ -10,10 +10,14 @@ updates:
     schedule:
       interval: "weekly"
     ignore:
-      - dependency-name: "jakarta.*"
+      - dependency-name: "jakarta.*" # Don't offer updates for new Jakarta EE spec versions
         update-types:
           - version-update:semver-major
           - version-update:semver-minor
-      - dependency-name: "org.eclipse.microprofile:microprofile-parent"
+      - dependency-name: "org.eclipse.microprofile:microprofile-parent" # The major version of microprofile-parent is tied to the Jakarta EE version
         update-types:
           - version-update:semver-major
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
